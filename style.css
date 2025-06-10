@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
-    background: #18181b;
+    background: #18181b url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat fixed;
     color: #f3f3f3;
     min-height: 100vh;
 }
@@ -9,11 +9,11 @@ body {
 .overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(120deg, rgba(24,24,27,0.9) 60%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(120deg, rgba(24,24,27,0.85) 60%, rgba(0,0,0,0.7) 100%);
     z-index: -2;
 }
 
-nav {
+.main-nav {
     width: 100%;
     background: rgba(24,24,27,0.95);
     box-shadow: 0 2px 16px rgba(0,0,0,0.2);
@@ -21,7 +21,7 @@ nav {
     top: 0; left: 0;
     z-index: 10;
 }
-nav ul {
+.main-nav ul {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -29,14 +29,14 @@ nav ul {
     margin: 0;
     padding: 1.2rem 0;
 }
-nav a {
+.main-nav a {
     color: #f3f3f3;
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 1px;
     transition: color 0.2s;
 }
-nav a:hover {
+.main-nav a:hover {
     color: #ffb347;
 }
 
@@ -76,6 +76,16 @@ nav a:hover {
     color: #ffb347;
     letter-spacing: 1.5px;
     min-height: 2.5rem;
+}
+
+.content-section {
+    max-width: 900px;
+    margin: 6rem auto 2rem auto;
+    padding: 2rem;
+    background: rgba(24,24,27,0.92);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+    color: #f3f3f3;
 }
 
 .gallery-section {
