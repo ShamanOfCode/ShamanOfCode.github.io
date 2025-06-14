@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>About Me - ShamanOfCode</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <nav class="main-nav">
-        <ul>
-            <li style="margin-right:auto;"><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="projects.html">Projects</a></li>
+<body class="min-h-screen bg-cover bg-center bg-no-repeat text-gray-100" style="background-image: url('https://images.unsplash.com/photo-1716497228167-ff72166374a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    <nav class="flex items-center px-8 py-4 bg-black/70 fixed w-full z-10">
+        <ul class="flex w-full items-center gap-8">
+            <li class="mr-auto"><a href="../index.html" class="font-bold text-lg hover:text-amber-400 transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition">About Me</a></li>
+            <li><a href="portfolio.html" class="hover:text-amber-400 transition">Portfolio</a></li>
+            <li><a href="projects.html" class="hover:text-amber-400 transition">Projects</a></li>
         </ul>
     </nav>
-    <main class="content-section">
-        <h1>About Me</h1>
-        <p>This is a placeholder for your About Me page. Add your bio and story here!</p>
+    <main class="flex flex-col justify-center items-center min-h-screen pt-32 pb-12">
+        <div class="bg-black/70 rounded-2xl shadow-2xl p-10 max-w-2xl w-full text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">About Me</h1>
+            <p class="mb-2 text-lg md:text-xl">This is a placeholder for your About Me page. Add your bio and story here!</p>
+        </div>
     </main>
 </body>
 </html>
