@@ -7,20 +7,32 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-cover bg-center bg-no-repeat text-gray-100" style="background-image: url('https://images.unsplash.com/photo-1716497228167-ff72166374a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-    <nav class="flex items-center px-8 py-4 bg-black/70 fixed w-full z-10">
-        <ul class="flex w-full items-center gap-8">
-            <li class="mr-auto"><a href="../index.html" class="font-bold text-lg hover:text-amber-400 transition">Home</a></li>
-            <li><a href="about.html" class="hover:text-amber-400 transition">About Me</a></li>
-            <li><a href="portfolio.html" class="hover:text-amber-400 transition">Portfolio</a></li>
-            <li><a href="projects.html" class="hover:text-amber-400 transition">Projects</a></li>
+    <nav class="flex items-center px-4 md:px-8 py-4 bg-black/70 fixed w-full z-10">
+        <ul class="flex w-full items-center gap-4 md:gap-8">
+            <li class="mr-auto"><a href="../index.html" class="font-bold text-base md:text-lg hover:text-amber-400 transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition text-base md:text-lg">About Me</a></li>
+            <li><a href="portfolio.html" class="hover:text-amber-400 transition text-base md:text-lg">Portfolio</a></li>
+            <li><a href="projects.html" class="hover:text-amber-400 transition text-base md:text-lg">Projects</a></li>
         </ul>
     </nav>
-    <main class="flex flex-col justify-center items-center min-h-screen pt-32 pb-12">
-        <div class="bg-black/70 rounded-2xl shadow-2xl p-10 max-w-2xl w-full text-center">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Portfolio</h1>
-            <p class="mb-2 text-lg md:text-xl">This is a placeholder for your Portfolio page. Add your work here!</p>
+    <main class="flex flex-col justify-center items-center min-h-screen pt-32 pb-12 px-2">
+        <div class="bg-black/70 rounded-2xl shadow-2xl p-4 md:p-10 max-w-2xl w-full text-center">
+            <h1 class="text-2xl md:text-4xl font-extrabold mb-4 tracking-tight">Portfolio</h1>
+            <p class="mb-2 text-base md:text-lg">This is a placeholder for your Portfolio page. Add your work here!</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                <div class="bg-black/60 rounded-xl p-4 flex flex-col items-center">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Portfolio 1" class="rounded-lg w-full h-40 object-cover mb-2 shadow-md">
+                    <h2 class="text-lg font-bold mb-1">Portfolio Item One</h2>
+                    <p class="text-sm text-gray-300">A brief description of your portfolio item.</p>
+                </div>
+                <div class="bg-black/60 rounded-xl p-4 flex flex-col items-center">
+                    <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80" alt="Portfolio 2" class="rounded-lg w-full h-40 object-cover mb-2 shadow-md">
+                    <h2 class="text-lg font-bold mb-1">Portfolio Item Two</h2>
+                    <p class="text-sm text-gray-300">Another portfolio item to showcase.</p>
+                </div>
+            </div>
         </div>
     </main>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
