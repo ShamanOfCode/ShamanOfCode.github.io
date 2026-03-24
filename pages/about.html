@@ -5,22 +5,142 @@
     <title>About Me - ShamanOfCode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body class="min-h-screen bg-cover bg-center bg-no-repeat text-gray-100" style="background-image: url('https://images.unsplash.com/photo-1716497228167-ff72166374a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-    <nav class="flex items-center px-4 md:px-8 py-4 bg-black/70 fixed w-full z-10">
-        <ul class="flex w-full items-center gap-4 md:gap-8">
-            <li class="mr-auto"><a href="../index.html" class="font-bold text-base md:text-lg hover:text-amber-400 transition">Home</a></li>
-            <li><a href="about.html" class="hover:text-amber-400 transition text-base md:text-lg">About Me</a></li>
-            <li><a href="portfolio.html" class="hover:text-amber-400 transition text-base md:text-lg">Portfolio</a></li>
-            <li><a href="projects.html" class="hover:text-amber-400 transition text-base md:text-lg">Projects</a></li>
-        </ul>
-    </nav>
-    <main class="flex flex-col justify-center items-center min-h-screen pt-32 pb-12 px-2">
-        <div class="bg-black/70 rounded-2xl shadow-2xl p-4 md:p-10 max-w-2xl w-full text-center">
-            <h1 class="text-2xl md:text-4xl font-extrabold mb-4 tracking-tight">About Me</h1>
-            <p class="mb-2 text-base md:text-lg">This is a placeholder0</p>
+<body class="bg-zinc-950 text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-zinc-950/95 backdrop-blur-lg border-b border-zinc-800">
+        <div class="container mx-auto px-6 py-4">
+            <ul class="flex items-center justify-between">
+                <li>
+                    <a href="../index.html" class="font-bold text-2xl bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent hover:scale-110 transition-transform duration-300 inline-block">ShamanOfCode</a>
+                </li>
+                <li class="flex gap-8 items-center">
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+            </ul>
         </div>
-    </main>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 right-20 w-96 h-96 bg-amber-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center fade-in-section">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+                    About Me
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400">
+                    Photographer • Developer • Creative Soul
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <!-- Profile Section -->
+                <div class="bg-zinc-900/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 border border-zinc-800 fade-in-section">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-48 h-48 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 p-1 flex-shrink-0">
+                            <div class="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center text-6xl">
+                                📸
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h2 class="text-3xl font-bold mb-4">Your Name Here</h2>
+                            <p class="text-lg text-gray-300 leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Section -->
+                <div class="mb-12 fade-in-section">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        My <span class="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Story</span>
+                    </h2>
+                    <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        </p>
+                        <p>
+                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="mb-12 fade-in-section">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                        <span class="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Skills</span> & Expertise
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-6 border border-zinc-800 hover:border-amber-500/50 transition-all duration-300">
+                            <h3 class="text-xl font-bold mb-3 text-amber-400">📷 Photography</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li>• Landscape & Nature</li>
+                                <li>• Portrait Photography</li>
+                                <li>• Photo Editing & Retouching</li>
+                                <li>• Composition & Lighting</li>
+                            </ul>
+                        </div>
+                        <div class="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-6 border border-zinc-800 hover:border-amber-500/50 transition-all duration-300">
+                            <h3 class="text-xl font-bold mb-3 text-orange-400">💻 Development</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li>• Web Development</li>
+                                <li>• UI/UX Design</li>
+                                <li>• Frontend Technologies</li>
+                                <li>• Creative Coding</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact CTA -->
+                <div class="text-center fade-in-section">
+                    <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Interested in collaborating? Feel free to reach out!
+                    </p>
+                    <a href="mailto:your.email@example.com" class="cta-button bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 py-12 border-t border-zinc-800">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-4">© 2025 ShamanOfCode. All rights reserved.</p>
+            <div class="flex justify-center gap-6">
+                <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">GitHub</a>
+                <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="../js/main.js"></script>
 </body>
 </html>

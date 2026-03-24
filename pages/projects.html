@@ -5,34 +5,145 @@
     <title>Projects - ShamanOfCode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body class="min-h-screen bg-cover bg-center bg-no-repeat text-gray-100" style="background-image: url('');">
-    <nav class="flex items-center px-4 md:px-8 py-4 bg-black/70 fixed w-full z-10">
-        <ul class="flex w-full items-center gap-4 md:gap-8">
-            <li class="mr-auto"><a href="../index.html" class="font-bold text-base md:text-lg hover:text-amber-400 transition">Home</a></li>
-            <li><a href="about.html" class="hover:text-amber-400 transition text-base md:text-lg">About Me</a></li>
-            <li><a href="portfolio.html" class="hover:text-amber-400 transition text-base md:text-lg">Portfolio</a></li>
-            <li><a href="projects.html" class="hover:text-amber-400 transition text-base md:text-lg">Projects</a></li>
-        </ul>
+<body class="bg-zinc-950 text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-zinc-950/95 backdrop-blur-lg border-b border-zinc-800">
+        <div class="container mx-auto px-6 py-4">
+            <ul class="flex items-center justify-between">
+                <li>
+                    <a href="../index.html" class="font-bold text-2xl bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent hover:scale-110 transition-transform duration-300 inline-block">ShamanOfCode</a>
+                </li>
+                <li class="flex gap-8 items-center">
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <main class="flex flex-col justify-center items-center min-h-screen pt-32 pb-12 px-2">
-        <div class="bg-black/70 rounded-2xl shadow-2xl p-4 md:p-10 max-w-2xl w-full text-center">
-            <h1 class="text-2xl md:text-4xl font-extrabold mb-4 tracking-tight">Projects</h1>
-            <p class="mb-2 text-base md:text-lg">This is a placeholder</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                <div class="bg-black/60 rounded-xl p-4 flex flex-col items-center">
-                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="" class="rounded-lg w-full h-40 object-cover mb-2 shadow-md">
-                    <h2 class="text-lg font-bold mb-1">Project One</h2>
-                    <p class="text-sm text-gray-300">A brief description</p>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center fade-in-section">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+                    Projects
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400">
+                    Development & Creative Coding
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="pb-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto space-y-8">
+                <!-- Project 1 -->
+                <div class="bg-zinc-900/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all duration-500 gallery-item group">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="relative overflow-hidden aspect-video md:aspect-auto">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Project 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="p-8 md:p-12 flex flex-col justify-center">
+                            <h3 class="text-3xl font-bold mb-4">Photography Portfolio Website</h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Built with modern web technologies.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm font-semibold">HTML/CSS</span>
+                                <span class="px-4 py-2 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">JavaScript</span>
+                                <span class="px-4 py-2 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold">Tailwind</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full font-semibold hover:shadow-lg transition-all">
+                                    View Live
+                                </a>
+                                <a href="#" class="px-6 py-3 border border-amber-500 text-amber-400 rounded-full font-semibold hover:bg-amber-500/10 transition-all">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-black/60 rounded-xl p-4 flex flex-col items-center">
-                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Project 2" class="rounded-lg w-full h-40 object-cover mb-2 shadow-md">
-                    <h2 class="text-lg font-bold mb-1">Project Two</h2>
-                    <p class="text-sm text-gray-300">Another cool project</p>
+
+                <!-- Project 2 -->
+                <div class="bg-zinc-900/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all duration-500 gallery-item group">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="relative overflow-hidden aspect-video md:aspect-auto order-2 md:order-1">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="p-8 md:p-12 flex flex-col justify-center order-1 md:order-2">
+                            <h3 class="text-3xl font-bold mb-4">Creative Web App</h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Interactive and responsive design.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm font-semibold">React</span>
+                                <span class="px-4 py-2 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">TypeScript</span>
+                                <span class="px-4 py-2 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold">Node.js</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full font-semibold hover:shadow-lg transition-all">
+                                    View Live
+                                </a>
+                                <a href="#" class="px-6 py-3 border border-amber-500 text-amber-400 rounded-full font-semibold hover:bg-amber-500/10 transition-all">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-zinc-900/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all duration-500 gallery-item group">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="relative overflow-hidden aspect-video md:aspect-auto">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Project 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="p-8 md:p-12 flex flex-col justify-center">
+                            <h3 class="text-3xl font-bold mb-4">Image Processing Tool</h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Advanced algorithms for photo enhancement.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm font-semibold">Python</span>
+                                <span class="px-4 py-2 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">OpenCV</span>
+                                <span class="px-4 py-2 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold">Flask</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full font-semibold hover:shadow-lg transition-all">
+                                    View Live
+                                </a>
+                                <a href="#" class="px-6 py-3 border border-amber-500 text-amber-400 rounded-full font-semibold hover:bg-amber-500/10 transition-all">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 py-12 border-t border-zinc-800">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-4">© 2025 ShamanOfCode. All rights reserved.</p>
+            <div class="flex justify-center gap-6">
+                <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">GitHub</a>
+                <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="../js/main.js"></script>
 </body>
 </html>

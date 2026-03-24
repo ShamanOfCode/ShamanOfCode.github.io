@@ -2,26 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ShamanOfCode</title>
+    <title>ShamanOfCode - Photography & Development</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen bg-cover bg-center bg-no-repeat text-gray-100" style="background-image: url('https://images.unsplash.com/photo-1716497228167-ff72166374a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-    <nav class="flex items-center px-8 py-4 bg-black/70 fixed w-full z-10">
-        <ul class="flex w-full items-center gap-8">
-            <li class="mr-auto"><a href="index.html" class="font-bold text-lg hover:text-amber-400 transition">Home</a></li>
-            <li><a href="pages/about.html" class="hover:text-amber-400 transition">About Me</a></li>
-            <li><a href="pages/portfolio.html" class="hover:text-amber-400 transition">Portfolio</a></li>
-            <li><a href="pages/projects.html" class="hover:text-amber-400 transition">Projects</a></li>
-        </ul>
-    </nav>
-    <main class="flex flex-col justify-center items-center min-h-screen pt-32 pb-12">
-        <div class="bg-black/70 rounded-2xl shadow-2xl p-10 max-w-2xl w-full text-center">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Welcome to ShamanOfCode</h1>
-            <p class="mb-2 text-lg md:text-xl">Explore the links above to learn more about me and my work!</p>
-            <p id="subtitle" class="text-amber-400 text-lg md:text-xl min-h-[2.5rem] font-mono"></p>
+<body class="bg-zinc-950 text-gray-100 overflow-x-hidden">
+    <!-- Animated Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-black/90 backdrop-blur-lg" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <ul class="flex items-center justify-between">
+                <li class="logo-item">
+                    <a href="index.html" class="font-bold text-2xl bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent hover:scale-110 transition-transform duration-300 inline-block">ShamanOfCode</a>
+                </li>
+                <li class="flex gap-8 items-center">
+                    <a href="pages/about.html" class="nav-link">About</a>
+                    <a href="pages/portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="pages/projects.html" class="nav-link">Projects</a>
+                </li>
+            </ul>
         </div>
-    </main>
+    </nav>
+
+    <!-- Hero Section with Parallax -->
+    <section class="hero-section relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="hero-bg absolute inset-0 z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-zinc-950 z-10"></div>
+
+        <div class="container mx-auto px-6 relative z-20 text-center">
+            <div class="hero-content opacity-0 translate-y-10">
+                <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight">
+                    <span class="inline-block animate-fade-in-up">Capturing</span>
+                    <span class="inline-block animate-fade-in-up animation-delay-200 bg-gradient-to-r from-amber-400 via-orange-500 to-pink-500 bg-clip-text text-transparent"> Moments</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-300 animate-fade-in-up animation-delay-400">
+                    Photography • Visual Stories • Creative Work
+                </p>
+                <div class="flex gap-4 justify-center animate-fade-in-up animation-delay-600">
+                    <a href="pages/portfolio.html" class="cta-button bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700">
+                        View Portfolio
+                    </a>
+                    <a href="pages/about.html" class="cta-button-outline">
+                        About Me
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <div class="w-6 h-10 border-2 border-amber-400 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-amber-400 rounded-full mt-2 animate-scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Preview -->
+    <section class="py-24 bg-zinc-950 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 fade-in-section">
+                Featured <span class="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Work</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="gallery-item group">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80" alt="Photography Sample" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold mb-2">Landscape Photography</h3>
+                                <p class="text-sm text-gray-300">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80" alt="Photography Sample" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold mb-2">Nature & Wildlife</h3>
+                                <p class="text-sm text-gray-300">Consectetur adipiscing elit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Photography Sample" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold mb-2">Mountain Adventures</h3>
+                                <p class="text-sm text-gray-300">Sed do eiusmod tempor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="py-24 bg-gradient-to-b from-zinc-950 to-zinc-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-amber-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center fade-in-section">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8">
+                    About <span class="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Me</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-12">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident.
+                </p>
+                <a href="pages/about.html" class="cta-button bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700">
+                    Learn More About Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 py-12 border-t border-zinc-800">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-4">© 2025 ShamanOfCode. All rights reserved.</p>
+            <div class="flex justify-center gap-6">
+                <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">GitHub</a>
+                <a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
