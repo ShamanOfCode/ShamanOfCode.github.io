@@ -1,6 +1,5 @@
 # TODO - Website Improvements
 
-## Issues to Fix Tomorrow:
 
 ### Current Problems:
 1. **Navigation bar issue** - "black thing at the top" needs fixing
@@ -13,6 +12,7 @@
 - Want **modern, fancy** design with nice animations
 - Dark theme preferred
 - Need placeholder text (Lorem ipsum) for user to replace
+- Add contact me page.
 
 ### What Works:
 - Basic structure is in place
