@@ -1,2 +1,0 @@
-# ShamanOfCode.io
-Personal Website
