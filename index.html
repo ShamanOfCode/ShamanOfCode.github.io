@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Evgeniy Markov — Fotografie</title>
+  <meta name="description" content="Portfolio von Evgeniy Markov – Portrait, Landschaft und Street Fotografie." />
+  <meta name="theme-color" content="#0b0b0a" />
+
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schutz zuerst laden, damit er sofort greift -->
+  <script src="js/protect.js"></script>
+</head>
+<body class="is-loading">
+
+  <!-- ===== Loader ===== -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__label">Lade Portfolio</span>
+      <span class="loader__count"><span id="loaderCount">0</span>%</span>
+    </div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <!-- ===== Cursor & Grain ===== -->
+  <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__text">Ansehen</span></div></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav">
+    <a href="#top" class="nav__logo" data-magnetic>EEMG<sup>©</sup></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#serien" class="nav__link"><span data-text="Serien">Serien</span></a>
+      <a href="#arbeiten" class="nav__link"><span data-text="Arbeiten">Arbeiten</span></a>
+      <a href="#about" class="nav__link"><span data-text="Über mich">Über mich</span></a>
+      <a href="#kontakt" class="nav__link"><span data-text="Kontakt">Kontakt</span></a>
+    </nav>
+    <div class="nav__meta"><span class="nav__dot"></span> Frankfurt <span id="clock">--:--</span></div>
+    <button class="nav__toggle" id="navToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks" data-cursor="hide"><i></i><i></i></button>
+    <div class="nav__progress"><span id="progress"></span></div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__floats" id="heroFloats"></div>
+
+      <div class="hero__content">
+        <p class="hero__kicker reveal-up"><span>Fotograf &amp; Visual Storyteller</span></p>
+        <h1 class="hero__title">
+          <span class="line" data-split>Evgeniy</span>
+          <span class="line line--indent" data-split>Markov<em class="serif">.</em></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__intro reveal-up"><span>Ich fange Licht, Momente und Menschen ein –<br />ehrlich, ruhig und mit einem Blick fürs Detail.</span></p>
+          <a href="#arbeiten" class="hero__scroll reveal-up" data-magnetic><span>Scroll</span><i></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marquee">
+        <span>Landschaft <em class="serif">✺</em> Architektur <em class="serif">✺</em> Street <em class="serif">✺</em> Reise <em class="serif">✺</em> Natur <em class="serif">✺</em>&nbsp;</span>
+        <span>Landschaft <em class="serif">✺</em> Architektur <em class="serif">✺</em> Street <em class="serif">✺</em> Reise <em class="serif">✺</em> Natur <em class="serif">✺</em>&nbsp;</span>
+      </div>
+    </section>
+
+    <!-- ===== Serien (horizontal) ===== -->
+    <section class="series" id="serien">
+      <div class="series__sticky">
+        <div class="series__head">
+          <h2 class="section-title"><span class="serif">Ausgewählte</span> Serien</h2>
+          <span class="series__counter"><span id="seriesIndex">01</span> / <span id="seriesTotal">05</span></span>
+        </div>
+        <div class="series__track" id="seriesTrack"></div>
+      </div>
+    </section>
+
+    <!-- ===== Galerie ===== -->
+    <section class="gallery" id="arbeiten">
+      <div class="gallery__head">
+        <h2 class="section-title" id="galleryTitle" data-reveal><span class="serif" id="galleryTitleA">Alle</span> <span id="galleryTitleB">Arbeiten</span></h2>
+        <!-- data-title: was in der Überschrift links steht, wenn der Filter aktiv ist -->
+        <div class="filters" id="filters" data-reveal>
+          <button class="filter is-active" data-filter="all" data-title="Alle|Arbeiten">Alle</button>
+          <button class="filter" data-filter="natur" data-title="Natur|&amp; Landschaft">Natur &amp; Landschaft</button>
+          <button class="filter" data-filter="architektur" data-title="Architektur|&amp; Stadt">Architektur</button>
+          <button class="filter" data-filter="street" data-title="Street|Fotografie">Street</button>
+          <button class="filter" data-filter="sport" data-title="Sport|Fotografie">Sport</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="grid__empty" id="gridEmpty" hidden>Diese Abteilung wächst gerade — die ersten Bilder folgen in Kürze.</p>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="about" id="about">
+      <div class="about__media">
+        <div class="ph ph--about" data-speed="-0.12">
+          <img id="aboutImg" alt="Foto von Evgeniy Markov – Gasse in Sirmione" draggable="false" />
+        </div>
+      </div>
+      <div class="about__body">
+        <span class="eyebrow" data-reveal>(Über mich)</span>
+        <!-- Dein Text kommt hier rein. Wörter, die kursiv hervorstechen sollen,
+             trägst du in js/main.js in der Liste EMPH ein. -->
+        <p class="about__text" id="aboutText"></p>
+        <!-- Platzhalter: sobald du eine echte Zahl hast, data-count="12" ergänzen,
+             dann zählt sie beim Scrollen wieder hoch. -->
+        <div class="stats">
+          <div class="stat" data-reveal><span class="stat__num">00</span><span class="stat__plus">+</span><span class="stat__label">Jahre Erfahrung</span></div>
+          <div class="stat" data-reveal><span class="stat__num">00</span><span class="stat__plus">+</span><span class="stat__label">Shootings</span></div>
+          <div class="stat" data-reveal><span class="stat__num">00</span><span class="stat__plus"></span><span class="stat__label">Länder bereist</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Kontakt ===== -->
+    <section class="contact" id="kontakt">
+      <span class="eyebrow" data-reveal>(Kontakt)</span>
+      <h2 class="contact__title">
+        <span class="line" data-split data-split-scroll>Lass uns</span>
+        <span class="line" data-split data-split-scroll><em class="serif">etwas</em>&nbsp;schaffen</span>
+      </h2>
+      <div class="contact__row">
+        <a href="mailto:evgeniymarkov2015@gmail.com" class="contact__btn" data-magnetic data-cursor="hide">
+          <span>Schreib mir</span>
+        </a>
+        <div class="contact__links" data-reveal>
+          <a href="mailto:evgeniymarkov2015@gmail.com" class="ulink">Mail ↗</a>
+          <a href="https://www.instagram.com/eemg430/" target="_blank" rel="noopener" class="ulink">Instagram ↗</a>
+          <a href="https://unsplash.com/@eemg?utm_source=portfolio_eemg&amp;utm_medium=referral" target="_blank" rel="noopener" class="ulink">Unsplash ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Evgeniy Markov. Alle Bilder urheberrechtlich geschützt.</span>
+    <span class="footer__links">
+      <a href="https://www.instagram.com/eemg430/" target="_blank" rel="noopener" class="ulink">Instagram ↗</a>
+      <a href="https://unsplash.com/@eemg?utm_source=portfolio_eemg&amp;utm_medium=referral" target="_blank" rel="noopener" class="ulink">Unsplash ↗</a>
+      <a href="#top" class="ulink">Nach oben ↑</a>
+    </span>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
+    <button class="lightbox__close" id="lbClose" aria-label="Schließen" data-cursor="hide">Schließen ✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Vorheriges Bild" data-cursor="hide">←</button>
+    <figure class="lightbox__figure">
+      <div class="ph ph--lb"><img id="lbImg" alt="" draggable="false" /></div>
+      <figcaption class="lightbox__cap">
+        <span id="lbTitle"></span><span id="lbMeta"></span>
+        <a id="lbLink" class="lightbox__link ulink" href="#" target="_blank" rel="noopener" data-cursor="hide">Auf Unsplash ↗</a>
+      </figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Nächstes Bild" data-cursor="hide">→</button>
+    <span class="lightbox__count" id="lbCount"></span>
+  </div>
+
+  <!-- ===== Toast (Schutzhinweis) ===== -->
+  <div class="toast" id="toast" role="status">© Die Bilder sind urheberrechtlich geschützt.</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/photos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
